@@ -22,15 +22,15 @@ const appearThenSlideLeft = keyframes`
 const appearThenSlideLeftLargeScreen = keyframes`
   0% {
     opacity: 0; 
-    transform: translateX(700%);
+    transform: translateX(0);
   }
   50% {
     opacity: 0.5;
-    transform: translateX(700%);
+    transform: translateX(0);
   }
   100% {
     opacity: 1; 
-    transform: translateX(0);
+    transform: translateX(-700%);
     display: block;
   }
 `;
