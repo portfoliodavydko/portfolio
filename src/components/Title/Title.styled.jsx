@@ -4,17 +4,17 @@ import { keyframes } from '@emotion/react';
 const appearThenSlideLeft = keyframes`
   0% {
     opacity: 0; 
-    transform: translateX(300%); 
+    transform: translateX(0); 
     display: block;
   }
   50% {
     opacity: 1;
-    transform: translateX(300%);
+    transform: translateX(0);
     display: block;
   }
   100% {
     opacity: 0; 
-    transform: translateX(-100%);
+    transform: translateX(-400%);
     display: none;
   }
 `;
@@ -61,7 +61,7 @@ export const TitleTxt = styled.h1`
   font-size: 36px;
   line-height: 48px;
   text-align: center;
-
+ 
   opacity: 0;
 
   animation: ${fadeIn} 0.5s ease-out forwards;
@@ -109,7 +109,8 @@ export const StyledImageBloks = styled.img`
 export const StyledImageHand = styled.img`
   width: 56px;
   height: 56px;
-
+  position: absolute;
+  left: 50%;
   opacity: 0;
   transform: translateX(700%);
 
@@ -117,6 +118,7 @@ export const StyledImageHand = styled.img`
   animation-delay: 0.3s;
 
   @media (min-width: 768px) {
+    position: relative;
     animation: ${appearThenSlideLeftLargeScreen} 1s ease-out forwards;
   }
 `;
