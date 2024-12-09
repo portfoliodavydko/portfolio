@@ -12,10 +12,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 50px;
+  padding: 60px;
+ 
 
   @media (min-width: 768px) {
-    padding: 80px;
+    padding: 70px;
     
   }
 `;
