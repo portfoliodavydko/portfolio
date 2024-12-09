@@ -382,17 +382,17 @@ PERFORMANCE OF THIS SOFTWARE.
 `,Yw="/portfolio/assets/line-71849aa2.png",Vf=()=>P.jsx(Xw,{src:Yw,alt:"slide1"}),Gw=Ls`
   0% {
     opacity: 0; 
-    transform: translateX(300%); 
+    transform: translateX(0); 
     display: block;
   }
   50% {
     opacity: 1;
-    transform: translateX(300%);
+    transform: translateX(0);
     display: block;
   }
   100% {
     opacity: 0; 
-    transform: translateX(-100%);
+    transform: translateX(-400%);
     display: none;
   }
 `,bw=Ls`
@@ -431,7 +431,7 @@ PERFORMANCE OF THIS SOFTWARE.
   font-size: 36px;
   line-height: 48px;
   text-align: center;
-
+ 
   opacity: 0;
 
   animation: ${mm} 0.5s ease-out forwards;
@@ -473,7 +473,8 @@ PERFORMANCE OF THIS SOFTWARE.
 `,tS=W.img`
   width: 56px;
   height: 56px;
-
+  position: absolute;
+  left: 50%;
   opacity: 0;
   transform: translateX(700%);
 
@@ -481,6 +482,7 @@ PERFORMANCE OF THIS SOFTWARE.
   animation-delay: 0.3s;
 
   @media (min-width: 768px) {
+    position: relative;
     animation: ${bw} 1s ease-out forwards;
   }
 `,nS="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAACRCAYAAACc5RcvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGtSURBVHgB7dvNSgJhFMfhMyJeSK2ii+ztIsWVXogLrUXa37Fgysn8eB6YjSCCMz88Lxyr2NmOcDGuVuPclzbw82pSwJ4gIAgC+JLzwO1o5QwBpxMEBEFAEAQEQUAQBARBQBAEBEFAEAQEQUAQBISu2Okv9Plu7lD3OFucvNm5XD95eEb0MJu3riYvdaJtbV5X6+dWDGZkgiAICIKAMO2/4Dzw/z7m/lY/NNbZ4575hYAgCAiCgCAICIKAIAgIgoAgCAiCgCAICIKAIAgIR38QstwHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcpm3v4nq1OryXbegbJwXsCQKCICAIAoIgIAgCgiAgCAKCICAIAoIgIAgCwrT4zm8X/LriagmCS9fer5c6EyMTBEFAMDJ9MvtT3eNscXB4XK6fPBhX6mE2b11N9vP2tjavq/VzKwYzMkEQBARBQBAEBEFAEAQEQUAQBARBQBAEBEFAEASEo23X/rLfUJYCuQXWvy9Uf3OV8zAyQRAEhKnZHwAAAAAA+CNvNnFfaCV+alEAAAAASUVORK5CYII=",rS="/portfolio/assets/wavingHand1-78f3b7bb.png",iS=()=>P.jsx(Jw,{children:P.jsxs(qw,{children:[P.jsx(tS,{src:rS,alt:"wawin hand"}),P.jsx(Zw,{children:"Hi, I'm a UI/UX Designer"}),P.jsx(eS,{src:nS,alt:"bloks"})]})}),oS=W.img`
