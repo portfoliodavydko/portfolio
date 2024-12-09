@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
+  position: fixed;
   padding: 20px;
   border-bottom: 1px solid var(--color-gray);
+  width: 100%;
+  background-color: white;
+  z-index: 10;
 `;
 
 export const Navigation = styled.nav`
@@ -11,14 +15,12 @@ export const Navigation = styled.nav`
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-
-
 `;
 
 export const StyledLink = styled(Link)`
   color: var(--color-gray);
 
-  font-weight:400;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 

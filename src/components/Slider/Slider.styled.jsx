@@ -1,20 +1,31 @@
 import styled from '@emotion/styled';
-import Slider from 'react-slick';
 
 export const Item = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+  align-content: center;
+  margin: 0 10px;
+  gap: 8px;
 
-export const SliderBox = styled(Slider)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 6px;
+  padding: 14px;
 `;
 
 export const StyledImage = styled.img`
   width: 24px;
   height: 24px;
+`;
+
+export const SliderBox = styled.div`
+ 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+  padding-top: 120px;
+  padding-bottom: 77px;
 `;
