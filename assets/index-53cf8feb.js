@@ -552,10 +552,11 @@ PERFORMANCE OF THIS SOFTWARE.
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 50px;
+  padding: 60px;
+ 
 
   @media (min-width: 768px) {
-    padding: 80px;
+    padding: 70px;
     
   }
 `,Hf=({children:e})=>P.jsx(hS,{children:e}),Qf=W.h2`
