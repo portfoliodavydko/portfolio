@@ -4,13 +4,18 @@ import sticker from '../../assets/sticker.png';
 
 export const Container = styled.div`
   background-image: url(${sticker});
-  width: 487px;
-  height: 471px;
+  background-position: center;
+  background-size: contain;
+  width: 387px;
+  height: 371px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 80px;
+  padding: 50px;
+
+  @media (min-width: 768px) {
+    padding: 80px;
+    
+  }
 `;
-
-

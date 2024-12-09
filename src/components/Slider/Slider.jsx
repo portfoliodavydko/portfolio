@@ -1,8 +1,5 @@
 import Marquee from 'react-marquee-slider';
-import { Item, SliderBox, StyledImage } from './Slider.styled';
-// import slide1 from '../../assets/slide1.png';
-// import slide4 from '../../assets/slide4.png';
-
+import { Item, SliderBox } from './Slider.styled';
 
 const DivSlider = () => {
   return (

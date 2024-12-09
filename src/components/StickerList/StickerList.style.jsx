@@ -11,15 +11,25 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
 
   margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `;
 
 export const List = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 88px;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    gap: 88px;
+  }
 `;

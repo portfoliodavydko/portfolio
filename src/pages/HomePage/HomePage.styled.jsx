@@ -6,11 +6,18 @@ export const SliderBox = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  position: absolute;
-  top: 20px;
+  position: relative;
+
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
+
+  @media (min-width: 768px) {
+    position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
 `;
 
 

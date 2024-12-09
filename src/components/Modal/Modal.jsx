@@ -5,7 +5,7 @@ import { Backdrop, CloseX, Content } from './Modal.style';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = ({ onClose, children }) => {
+export const Modal = ({ onClose, children, marginTop }) => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.code === 'Escape') {
@@ -31,7 +31,7 @@ export const Modal = ({ onClose, children }) => {
 
   return createPortal(
     <Backdrop onClick={handleBackdropClick}>
-      <Content>
+      <Content marginTop={marginTop}>
         <CloseX onClick={handleCloseClick}>X</CloseX>
         {children}
       </Content>

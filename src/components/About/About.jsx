@@ -2,9 +2,9 @@ import { Container, StyledSmile, Text, Title, TitleBox } from './About.styled';
 
 import aboutSmile from '../../assets/aboutSmile.png';
 
-const About = () => {
+const About = ({about}) => {
   return (
-    <Container>
+    <Container id={about}>
       <TitleBox>
         <StyledSmile src={aboutSmile} alt="aboutSmile" />
         <Title>About me</Title>

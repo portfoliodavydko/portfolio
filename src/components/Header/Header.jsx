@@ -1,24 +1,30 @@
-import {
-  HeaderContainer,
-  IconWrapper,
-  Navigation,
-  StyledLink,
-} from './Header.styled';
-import sprite from 'assets/sprite.svg';
+import { useState } from 'react';
+import { DesctopNav, HeaderContainer, Line, MobileBtn } from './Header.styled';
+
+import { Modal } from '../Modal/Modal';
+import Nav from './Nav';
 
 export const Header = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setShowMobileMenu((prevState) => !prevState);
+  };
+
   return (
     <HeaderContainer>
-      <Navigation>
-        <IconWrapper>
-          <use href={`${sprite}#icon-Dava`} />
-        </IconWrapper>
-        <StyledLink to="#">Features</StyledLink>
-        <StyledLink to="#">Discover</StyledLink>
-        <StyledLink to="#">Gallery</StyledLink>
-        <StyledLink to="#">Templates</StyledLink>
-        <StyledLink to="#">Updates</StyledLink>
-      </Navigation>
+      <DesctopNav>
+        <Nav />
+      </DesctopNav>
+      <MobileBtn onClick={toggleMobileMenu}>
+        <Line></Line>
+        <Line></Line>
+      </MobileBtn>
+      {showMobileMenu && (
+        <Modal onClose={toggleMobileMenu}>
+          <Nav />
+        </Modal>
+      )}
     </HeaderContainer>
   );
 };

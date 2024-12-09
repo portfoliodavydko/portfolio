@@ -13,7 +13,7 @@ import { Modal } from '../../components/Modal/Modal';
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const toggleSuccessModal = () => {
+  const toggleModal = () => {
     setShowModal((prevState) => !prevState);
   };
 
@@ -27,16 +27,16 @@ const HomePage = () => {
       <Button
         text={'Say hello 💭'}
         position="0 auto"
-        handleOpen={toggleSuccessModal}
+        handleOpen={toggleModal}
       />
       <Separator />
-      <About />
+      <About about={'aboutMe'}/>
       <StickerList />
       <Separator />
 
       {showModal && (
-        <Modal onClose={toggleSuccessModal}>
-          <h1>ТУТ МОЖНА ЗРОБИТИ ЯКУСЬ ФОРМЦ ЗВОРОТНЬОГО ЗВ'ЯЗКУ</h1>
+        <Modal onClose={toggleModal} marginTop={'200px'}>
+          <h1>ТУТ МОЖНА ЗРОБИТИ ЯКУСЬ ФОРМУ ЗВОРОТНЬОГО ЗВ'ЯЗКУ</h1>
         </Modal>
       )}
     </>

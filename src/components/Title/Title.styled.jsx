@@ -1,29 +1,46 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
-const slideInFromCenter = keyframes`
+const appearThenSlideLeft = keyframes`
   0% {
-    transform: translateX(700%);
-    opacity: 0;
+    opacity: 0; 
+    transform: translateX(300%); 
+    display: block;
   }
   50% {
-    transform: translateX(0); /* Элемент на своем месте */
-    opacity: 0.5; /* Полупрозрачный */
+    opacity: 1;
+    transform: translateX(300%);
+    display: block;
   }
   100% {
-    transform: translateX(0); 
-    opacity: 1;
+    opacity: 0; 
+    transform: translateX(-100%);
+    display: none;
   }
 `;
 
-const slideInFromRight = keyframes`
+const appearThenSlideLeftLargeScreen = keyframes`
   0% {
-    transform: translateX(100%);
+    opacity: 0; 
+    transform: translateX(700%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(700%);
+  }
+  100% {
+    opacity: 1; 
+    transform: translateX(0);
+    display: block;
+  }
+`;
+
+const fadeIn = keyframes`
+  0% {
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
-    opacity: 1;
+    opacity: 1; 
   }
 `;
 
@@ -31,16 +48,32 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
+
+  padding: 100px 16px 0 16px;
+
+  @media (min-width: 768px) {
+    padding-top: 150px 0 0 0;
+  }
 `;
 
 export const TitleTxt = styled.h1`
   font-weight: 800;
-  font-size: 48px;
-  line-height: 59px;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
 
-  animation: ${slideInFromRight} 1s ease-out forwards;
+  opacity: 0;
+
+  animation: ${fadeIn} 0.5s ease-out forwards;
   animation-delay: 1s;
+
+  @media (min-width: 768px) {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+
+    text-align: left;
+  }
 `;
 
 export const SemiConainer = styled.div`
@@ -52,21 +85,38 @@ export const SemiConainer = styled.div`
 `;
 
 export const StyledImageBloks = styled.img`
-  width: 194px;
-  height: 143px;
+  width: 90px;
+  height: 70px;
   object-fit: cover;
 
   position: absolute;
-  right: -36px;
+  top: -10px;
+  right: 0;
 
-  animation: ${slideInFromRight} 1s ease-out forwards;
+  opacity: 0;
+
+  animation: ${fadeIn} 1s ease-out forwards;
   animation-delay: 1.3s;
+
+  @media (min-width: 768px) {
+    width: 194px;
+    height: 143px;
+
+    right: -36px;
+  }
 `;
 
 export const StyledImageHand = styled.img`
   width: 56px;
   height: 56px;
 
-  animation: ${slideInFromCenter} 1s ease-out forwards;
+  opacity: 0;
+  transform: translateX(700%);
+
+  animation: ${appearThenSlideLeft} 1s ease-out forwards;
   animation-delay: 0.3s;
+
+  @media (min-width: 768px) {
+    animation: ${appearThenSlideLeftLargeScreen} 1s ease-out forwards;
+  }
 `;

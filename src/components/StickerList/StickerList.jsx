@@ -9,12 +9,10 @@ const GOOGLE_DRIVE_LINK_CERTIFICATE =
   'https://drive.google.com/file/d/1YHoDo93ILb36w5_TEsI8QXgSskRXu3Q1/view?usp=drive_link';
 const StickerList = () => {
   const handleOpenCv = () => {
-    // Открытие ссылки на Google Drive
     window.open(GOOGLE_DRIVE_LINK_CV, '_blank');
   };
 
   const handleOpenCertificate = () => {
-    // Открытие ссылки на Google Drive
     window.open(GOOGLE_DRIVE_LINK_CERTIFICATE, '_blank');
   };
 

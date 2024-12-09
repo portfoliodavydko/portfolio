@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
@@ -10,27 +9,28 @@ export const HeaderContainer = styled.div`
   z-index: 10;
 `;
 
-export const Navigation = styled.nav`
+export const MobileBtn = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-`;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  justify-content: center;
 
-export const StyledLink = styled(Link)`
-  color: var(--color-gray);
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-
-  &:hover,
-  &:focus {
-    color: var(--color-accent);
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 
-export const IconWrapper = styled.svg`
-  width: 24px;
-  height: 24px;
+export const DesctopNav = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
+export const Line = styled.div`
+height: 1px;
+width: 20px;
+border: 1px solid;
 `;

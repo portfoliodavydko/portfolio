@@ -27,15 +27,25 @@ export const TitleBox = styled.div`
 
 export const Title = styled.h2`
   font-weight: 800;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 48px;
+
+  @media (min-width: 768px) {
+    font-size: 48px;
+    line-height: 60px;
+  }
 `;
 
 export const Text = styled.p`
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 24px;
 
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 `;

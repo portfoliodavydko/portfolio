@@ -19,13 +19,17 @@ export const StyledImage = styled.img`
 `;
 
 export const SliderBox = styled.div`
- 
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 
   margin-top: 10px;
-  padding-top: 120px;
-  padding-bottom: 77px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+
+  @media (min-width: 768px) {
+    padding-top: 120px;
+    padding-bottom: 77px;
+  }
 `;

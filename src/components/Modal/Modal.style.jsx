@@ -15,21 +15,22 @@ export const Content = styled.div`
   left: 50%;
   width: 100%;
   min-height: 280px;
+  max-width: 380px;
   transform: translate(-50%, -50%);
   padding: 48px 24px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 12px;
   border: 1px solid rgba(239, 237, 232, 0.2);
-
-  @media (max-width: 768px) {
+  margin-top: ${(props) => props.marginTop || '0'};
+  @media (min-width: 768px) {
     top: 16px;
     min-width: 430px;
     max-width: 694px;
     width: fit-content;
   }
 
-  @media (max-width: 480px) {
-    max-width: 480px;
+  @media (min-width: 1200px) {
+    max-width: 1200px;
   }
 `;
 
@@ -40,7 +41,7 @@ export const CloseX = styled.p`
   width: 22px;
   height: 22px;
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     top: 16px;
     right: 16px;
     width: 26px;
